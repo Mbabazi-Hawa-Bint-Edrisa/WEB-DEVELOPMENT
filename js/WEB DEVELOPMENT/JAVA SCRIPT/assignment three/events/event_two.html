@@ -1,0 +1,21 @@
+<!-- Make a html text input which logs the value when the input is changing. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logging Text Input Value</title>
+</head>
+<body>
+
+
+<input type="text" id="textInput" placeholder="Input text...">
+
+<script>
+document.getElementById("textInput").addEventListener("input", function(event) {
+    console.log("Text input value:", event.target.value);
+});
+</script>
+
+</body>
+</html>

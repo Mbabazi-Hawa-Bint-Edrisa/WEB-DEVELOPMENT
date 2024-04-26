@@ -1,0 +1,32 @@
+<!-- Write a <div> element which turns red when someone moves the mouse over it -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red Div on Hover</title>
+<style>
+    /* Defining div styles*/
+    .red-div {
+        width: 1350px;
+        height: 200px;
+        background-color: beige;
+        /* transition makes the color change smooth */
+        transition: background-color 0.3s ease;
+    }
+
+    /* Change background color to red on hover */
+    .red-div:hover {
+        background-color: red;
+    }
+</style>
+</head>
+<body>
+
+<!-- Div element -->
+<div class="red-div">
+    <p style="font-size: 50px; text-align: center;">Hover here to change color</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    </head>
+    <body>
+        <p>Click the "Click me" button to hide and show the div element:</p>
+        
+        <button onclick="my_document()">Try it</button>
+        
+        <div id="my_div">
+        My name is Mbabazi Hawa Bint Edrisa a data scientist
+        </div>
+        
+        <p><b>Note:</b> I love javascript.</p>
+        
+        <script>
+        function my_document() {
+        var x = document.getElementById("my_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+        </script>
+        
+   
+</body>
+</html>
+

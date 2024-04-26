@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="carList">For Loops</p>
+    <p id="output">Loop Output</p>
+    <script>
+        const cars = ['Toyota', 'Honda', 'Ford', 'Chevrolet', 'Nissan'];
+        let text = '';
+        for (let i = 0; i < cars.length; i++) {
+          text += cars[i] + "<br>";
+        }
+        document.getElementById("carList").innerHTML += "<br>" + text;
+
+
+        let text2= '';
+        for (let i = 0; i < 5; i++) {
+            text2 += "The number is " + i + "<br>";
+        }
+        document.getElementById("output").innerHTML += text2;
+    </script>
+
+    
+</body>
+</html>

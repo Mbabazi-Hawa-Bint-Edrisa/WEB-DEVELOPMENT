@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidationForm</title>
+    <!-- Create a html form with Email, Name and Password elements. Add validation on form submission if 
+        some values are not added. I.e the validation should throw an alert that says ‘Please fill all the values’
+ -->
+    <!-- Using student form  -->
+    <style>
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Information</h2>
+   
+    <form id="studentForm" onsubmit="validateForm(); return false;">
+ <!-- This creates a form with the ID "studentForm" and attaches an onsubmit 
+        attribute that calls the validateForm() function when the form is submitted. -->
+        <!-- Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <pre> </pre>
+
+        <!-- Name -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <pre> </pre>
+
+        <!-- Password -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <pre> </pre>
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
+    
+    </form>
+
+    <script>
+        // Retrieving  values entered by student for Email, Name and Password
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            
+
+            // Check if any field is empty
+            // Checking if any of the required fields are empty inorder to display an alert and pause form submission
+            if (email === "" || name === "" || password === "") {
+                alert("Please fill all the values.");
+                return;
+            }
+
+           
+
+            // when the validations pass, proceed to submit the form
+            
+            //  Displaying the First and Last Name separately
+            // Assuming the student is filling their full name in a single input field , you can extract the first and last names separately
+            
+             var firstName = name.split(' ')[0];
+             var lastName = name.split(' ')[1];
+
+             alert("First Name: " + firstName + "\n Last Name: " + lastName);
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+

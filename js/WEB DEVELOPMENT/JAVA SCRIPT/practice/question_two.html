@@ -1,0 +1,37 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title>Square Numbers</title>
+</head>
+<body>
+  <p>This displays the squred values of numbers from 1 to 10</p>
+
+
+<script>
+  // Function to square a number
+  function square(number) {
+    return number * number;
+  }
+
+  // Loop from 1 to 10 and square each number
+  // javascript for loop, we initialize i as 1,<=10 this loop continues until it is less or equal to 10,1++ increase the value by 1 after each iteration
+
+  for (let i = 1; i <= 10; i++) {
+    const squaredValue = square(i);
+    // Create a new paragraph element
+    const paragraph = document.createElement("p");
+    // Set the text content of the paragraph
+    paragraph.textContent = `Square of ${i} is: ${squaredValue}`;
+    // textContent is a property of a pargraph 
+    // th ${i} replaces the placeholder i with 1 and ${aquaredValue} replaces this placeholder with the value named squaredValue  
+    // Append the paragraph to the body of the HTML document
+    document.body.appendChild(paragraph);
+    // document.body, we use this because in the <body> element is where the content is displayed
+    // appendChild appends or adds the paragraph which is an element in the body
+
+  }
+</script>
+
+</body>
+</html>
+
